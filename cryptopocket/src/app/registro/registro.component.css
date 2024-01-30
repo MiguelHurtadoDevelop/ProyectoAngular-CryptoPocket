@@ -1,0 +1,38 @@
+.register-form {
+    max-width: 30%;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .input-field {
+    width: 94%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: red; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .submit-button:hover {
+    background-color: black;
+    color:#ddd;
+  }

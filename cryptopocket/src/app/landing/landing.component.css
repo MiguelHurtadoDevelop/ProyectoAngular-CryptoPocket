@@ -1,0 +1,218 @@
+.bg-primary {
+    background-color: rgb(173, 4, 4) !important;
+}
+
+
+body {
+    background-color: #f8f9fa !important;
+}
+
+
+
+.hero-section {
+    background: #121212 !important;
+    background: linear-gradient(
+        135deg,
+        #121212 25%,
+        #1a1a1a 25%,
+        #1a1a1a 50%,
+        #121212 50%,
+        #121212 75%,
+        #1a1a1a 75%,
+        #1a1a1a
+    ) !important;
+    background-size: 40px 40px !important;
+    animation: move 4s linear infinite !important;
+    color: #fff !important;
+    text-align: center !important;
+    padding: 5vh 0 !important;
+}
+
+.hero-section h1 {
+    color: rgb(173, 4, 4) !important;
+    font-size: 2.5em !important;
+    font-weight: bold !important;
+}
+
+.hero-section .lead {
+    color: #fff !important;
+    font-size: 1.25em !important;
+    margin-bottom: 5vh !important;
+}
+
+.hero-section form {
+    max-width: 60vh !important;
+    margin: 0 auto !important;
+}
+
+.hero-section input.form-control {
+    width: 100% !important;
+    margin-bottom: 1vh !important;
+    padding: 1vh !important;
+    border: none !important;
+    border-radius: 1vh !important;
+}
+
+.hero-section button.btn-primary {
+    width: 100% !important;
+    padding: 1.2vh !important;
+    background-color: rgb(173, 4, 4) !important;
+    border: none !important;
+    border-radius: 1vh !important;
+    cursor: pointer !important;
+}
+
+.hero-section button.btn-primary:hover {
+    background-color: #fff !important;
+    color: rgb(173, 4, 4) !important;
+    border: 1px solid rgb(173, 4, 4) !important;
+}
+
+.hero-section img.img-fluid {
+    max-width: 100% !important;
+    height: auto !important;
+    margin-top: 5vh !important;
+}
+
+.about-us-section {
+    background-color: #f8f9fa !important;
+    padding: 10vh 0 !important;
+}
+
+.about-us-section h2 {
+    color: rgb(173, 4, 4) !important;
+}
+
+.about-us-section p {
+    color: #495057 !important;
+}
+
+.about-us-section img {
+    max-width: 75% !important;
+    height: auto !important;
+}
+
+.crypto-news-section {
+    padding: 10vh 5vh !important;
+}
+
+.crypto-news-card {
+    background-color: #fff !important;
+    border-radius: 2vh !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    margin-bottom: 5vh !important;
+    height: 90% !important;
+}
+
+.crypto-news-card img {
+    max-width: 100% !important;
+    border-top-left-radius: 2vh !important;
+    border-top-right-radius: 2vh !important;
+}
+
+.crypto-news-card .card-body {
+    padding: 2vh !important;
+}
+
+.crypto-news-card h3 {
+    color: rgb(173, 4, 4) !important;
+}
+
+.testimonios {
+    width: 90% !important;
+    padding: 4vh 1vh !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) !important;
+    background-color: #fff !important;
+    border-radius: 2vh !important;
+}
+
+.testimonial-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.testimonial-card img {
+    max-width: 10% !important;
+    border-radius: 50% !important;
+    margin-bottom: 2vh !important;
+}
+
+.testimonial-card h4 {
+    color: rgb(173, 4, 4) !important;
+}
+
+.fact {
+    text-align: center !important;
+    height: 50% !important;
+    padding: 3vh !important;
+    border-radius: 15px !important;
+    box-shadow: 0 0 20px rgb(255, 249, 249) !important;
+    transition: transform 0.3s ease-in-out !important;
+    color: #fff !important;
+    margin: 20% !important;
+}
+
+.fact:hover {
+    transform: scale(1.05) !important;
+}
+
+.fact h2 {
+    font-size: 3rem !important;
+    color: #fff !important;
+}
+
+.fact p {
+    font-size: 1.3rem !important;
+}
+
+.newsletter-section {
+    padding: 5vh !important;
+    margin-bottom: 10vh !important;
+}
+
+.newsletter-text h2 {
+    font-size: 250% !important;
+    margin-bottom: 20px !important;
+    color: #fff !important;
+}
+
+.newsletter-text p {
+    font-size: 100% !important;
+}
+
+.newsletter-form {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.newsletter-form input {
+    width: 60% !important;
+    padding: 1vh !important;
+    margin-bottom: 1vh !important;
+    border: none !important;
+    border-radius: 0.5vh !important;
+}
+
+.newsletter-form button {
+    width: 40% !important;
+    padding: 10px !important;
+    background-color: #fff !important;
+    color: rgb(173, 4, 4) !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+}
+
+.newsletter-form button:hover {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    background-color: transparent !important;
+}
+
+
+  
+  
+  

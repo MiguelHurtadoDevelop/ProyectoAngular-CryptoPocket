@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cryptopocket-e6db1": {
+      "hosting": {
+        "cryptopocket": [
+          "cryptopocket-e6db1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cryptopocket-e6db1"
+  }
+}

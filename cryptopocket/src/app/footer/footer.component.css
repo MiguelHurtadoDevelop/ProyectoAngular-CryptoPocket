@@ -1,0 +1,9 @@
+footer {
+    margin-top: 10vh !important;
+    background-color: rgb(173, 4, 4) !important;
+}
+
+footer a {
+    color: #fff !important;
+    text-decoration: none !important;
+}

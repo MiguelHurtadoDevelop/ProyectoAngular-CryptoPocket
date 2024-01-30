@@ -1,0 +1,50 @@
+
+<button (click)="volver()" class="volver"><img src="../../assets/img/flecha-izquierda.png"></button>
+<h1>Detalles de la moneda</h1>
+<div class="detalleMoneda">
+
+
+    <div class="detalle">
+        <div class="titulo">
+            <img *ngIf="ajax.detalleMoneda" src="{{ajax.detalleMoneda.image.large}}" alt="">
+            <div>
+                    <p *ngIf="ajax.detalleMoneda" class="nombre">{{ajax.detalleMoneda.name}}</p>
+                    <p *ngIf="ajax.detalleMoneda" class="symbol">{{ajax.detalleMoneda.symbol}}</p>
+            </div>
+            <button (click)="seguirMoneda(ajax.detalleMoneda.id)" *ngIf="!comprobarSeguida(ajax.detalleMoneda.id)">seguir</button>
+            <button (click)="dejarDeSeguirMoneda(ajax.detalleMoneda.id)" *ngIf="comprobarSeguida(ajax.detalleMoneda.id)">dejar de seguir</button>
+            
+        </div>
+        
+        <div class="details-container">
+            <p *ngIf="ajax.detalleMoneda"><b>Precio: </b>{{ajax.detalleMoneda.market_data.current_price.eur}}€</p>
+            <p *ngIf="ajax.detalleMoneda"><b>Fecha de creación: </b>{{ajax.detalleMoneda.genesis_date}}</p>
+            <h6>Enlaces</h6>
+
+            <p *ngIf="ajax.detalleMoneda.links.homepage[0]">
+                <b>Web: </b> <a href="{{ajax.detalleMoneda.links.homepage[0]}}">{{ajax.detalleMoneda.links.homepage[0]}}</a>
+            </p>
+
+            <p *ngIf="ajax.detalleMoneda.links.twitter_screen_name">
+                <b>Twitter: </b> <a href="https://twitter.com/{{ajax.detalleMoneda.links.twitter_screen_name}}">https://twitter.com/{{ajax.detalleMoneda.links.twitter_screen_name}}</a>
+            </p>
+
+            <p *ngIf="ajax.detalleMoneda.links.facebook_username">
+                <b>Facebook: </b> <a href="https://www.facebook.com/{{ajax.detalleMoneda.links.facebook_username}}">https://www.facebook.com/{{ajax.detalleMoneda.links.facebook_username}}</a>
+            </p>
+
+            <p *ngIf="ajax.detalleMoneda.links.repos_url.github[0]">
+                <b>GitHub: </b> <a href="{{ajax.detalleMoneda.links.repos_url.github[0]}}">{{ajax.detalleMoneda.links.repos_url.github[0]}}</a>
+            </p>
+            <p *ngIf="ajax.detalleMoneda">
+                <b>Descripción: </b> 
+                <span [innerHTML]="ajax.detalleMoneda.description.es || ajax.detalleMoneda.description.en || 'No disponible'"></span>
+            </p>
+
+            
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,24 @@
+
+
+
+<header>
+    <nav>
+        <a routerLink=""><h1>CryptoPocket</h1></a>
+
+        <div>
+            <a routerLink="" routerLinkActive="active" >Home</a>
+            <a routerLink="monedas" routerLinkActive="active" >Monedas</a>       
+         </div>
+        <div>
+            <h4 *ngIf="this.auth.Usuario && this.auth.Usuario.displayName"> {{this.auth.Usuario.displayName}}</h4>
+            <button  *ngIf="!this.auth.Usuario">
+                    <a routerLink="login"  routerLinkActive="active" >Iniciar Sesion</a>
+            </button>
+            <button  *ngIf="!this.auth.Usuario">
+                    <a routerLink="registro"  routerLinkActive="active" >Registrarse</a>
+            </button>
+            <button (click)="cerrarSesion()" *ngIf="this.auth.Usuario">Cerrar Sesion</button>
+        </div>
+ 
+    </nav>
+</header>  

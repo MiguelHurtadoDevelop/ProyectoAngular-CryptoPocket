@@ -1,0 +1,8 @@
+<div class="register-form">
+    <h3>Registro</h3>
+    <input placeholder="Nombre" type="text" [(ngModel)]="displayName" class="input-field">
+    <input placeholder="Email" type="email" [(ngModel)]="email" class="input-field">
+    <input placeholder="Contraseña" type="password" [(ngModel)]="password" class="input-field">
+    
+    <button (click)="crearUsuario()" class="submit-button">Crear Usuario</button>
+  </div>

@@ -1,0 +1,39 @@
+.login-form {
+    margin: 5% auto;
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .input-field {
+    width: 94%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .submit-button, .google-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: red; /* Rojo */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .submit-button:hover, .google-button:hover {
+    background-color: black; 
+    color:#ddd;/* Tono más oscuro de rojo al pasar el mouse */
+  }

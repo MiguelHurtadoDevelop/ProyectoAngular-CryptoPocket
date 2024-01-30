@@ -1,0 +1,75 @@
+
+    
+    <input id="Buscar" type="text" placeholder="Buscar Monedas" [(ngModel)]="monedaBuscar" (keyup)="buscar()" > 
+
+    
+    <div id="monedas">
+        <div *ngFor="let dato of ajax.datosApi; let i=index">
+            
+                <div *ngIf="dato.item " id="moneda" >
+                    <div (click)="mostrarDetalle(dato.item.id)">
+                        <img src="{{dato.item.small}}" alt="" >
+
+                        <p id="name" >{{dato.item.name}}</p>
+                        <p>{{dato.item.data.price}}</p>
+                        
+                    </div>
+                    
+                    <button (click)="seguirMoneda(dato.item.id)" *ngIf="!comprobarSeguida(dato.item.id)" class="btn">seguir</button>
+                    <button (click)="dejarDeSeguirMoneda(dato.item.id)"  *ngIf="comprobarSeguida(dato.item.id)" class="btn">dejar de seguir</button>
+                    
+                </div>
+                
+                <div *ngIf="dato.id " id="moneda" >
+                    <div (click)="mostrarDetalle(dato.id)">
+                        <img src="{{dato.large}}" alt="" >
+                        <p id="name">{{dato.name}}</p>
+                        
+
+                    </div>
+                    
+                    <button (click)="seguirMoneda(dato.id)" *ngIf="!comprobarSeguida(dato.id)">seguir</button>
+                    <button (click)="dejarDeSeguirMoneda(dato.id)" *ngIf="comprobarSeguida(dato.id)">dejar de seguir</button>
+                    
+                </div>
+        </div>
+    </div>
+    
+
+    
+    <div>
+        <h2 class="display-4">Monedas Seguidas</h2>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Volumen</th>
+                <th>Capitalizacion</th>
+                <th><img src="../../assets/img/flecha-hacia-abajo.png"></th>
+                <th><img src="../../assets/img/flecha-hacia-arriba.png"></th>
+                <th>Precio Actual</th>
+                
+            </tr>
+            <tr *ngFor="let dato of firestore.detalleMonedaGuardada">
+                <td>
+                    <div class="data-container">
+                        <img *ngIf="dato?.image?.small; else noData" src="{{dato.image.small}}">
+                        <div>
+                            <div class="name">{{dato?.name || 'Dato no disponible'}}</div>
+                            <div class="symbol">{{dato?.symbol || 'Dato no disponible'}}</div>
+                        </div>
+                    </div>
+                </td>
+                <td>{{dato?.market_data.total_volume?.eur || 'Dato no disponible'}}€</td>
+                <td>{{dato?.market_data.market_cap?.eur || 'Dato no disponible'}}€</td>
+                <td>{{dato?.market_data.low_24h?.eur || 'Dato no disponible'}}€</td>
+                <td>{{dato?.market_data.high_24h?.eur || 'Dato no disponible'}}€</td>
+                <td>{{dato?.market_data?.current_price?.eur || 'Dato no disponible'}}€</td>
+                <td><button (click)="dejarDeSeguirMoneda(dato.id)">Dejar de seguir</button></td>
+            </tr>
+
+            <ng-template #noData>
+                <span>Dato no disponible</span>
+            </ng-template>
+        </table>
+    </div>
+
